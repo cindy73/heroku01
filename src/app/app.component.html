@@ -1,0 +1,54 @@
+<!-- START PAGE SOURCE -->
+<div id="shell">
+    <div id="header">
+        <h1 id="logo">
+            <img height="180" width="170" src="https://www.universidades.com.ec/logos/original/logo-escuela-superior-politecnica-agropecuaria-de-manabi.png" alt="">
+        </h1>
+        <div class="social">
+            <h2> Quinto Nivel</h2>
+            <h2>CC-05051</h2>
+            <h2> Sistemas y Aplicaciones Web</h2>
+            <h2> Despliegue de aplicaciones</h2>
+            <span>Redes Sociales:</span>
+            <ul>
+                <li><a class="twitter">twitter</a></li>
+                <li><a class="facebook">facebook</a></li>
+                <li><a class="vimeo">vimeo</a></li>
+                <li><a class="rss">rss</a></li>
+            </ul>
+        </div>
+        <div id="navigation" style="margin-top: 30px;;">
+            <ul>
+                <li><a class="active">OPCION 1</a></li>
+                <li><a>OPCION 2</a></li>
+                <li><a>OPCION 3</a></li>
+                <li><a>OPCION 4</a></li>
+                <li><a>OPCION 5</a></li>
+                <li><a>OPCION 6</a></li>
+            </ul>
+        </div>
+        <div id="sub-navigation">
+            <ul>
+                <li><a [routerLink]="['peliculas/estreno']" routerLinkActive="peliculas/estreno">Estreno</a></li>
+                <li><a [routerLink]="['peliculas/mejor-valoradas']">Populares</a></li>
+            </ul>
+            <div id="search">
+                <label for="search-field">Buscar</label>
+                <input type="text" (keyup.enter)="serachMovies($event)" name="search" autocomplete="off" placeholder="Buscar..." class="blink search-field" />
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <router-outlet>
+        </router-outlet>
+
+
+        <div class="cl">&nbsp;</div>
+    </div>
+    <div id="footer">
+        <p class="lf">Copyright &copy; 2021 <a href="#">ESPAM MFL</a> - All Rights Reserved</p>
+
+        <div style="clear:both;"></div>
+    </div>
+</div>
+<!-- END PAGE SOURCE -->
